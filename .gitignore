@@ -1,0 +1,5 @@
+venv/
+token
+.DS_Store
+.idea
+config.js

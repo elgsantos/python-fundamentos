@@ -5,3 +5,6 @@ class Veiculo:
         self.rodas = rodas
         self.marca = marca
         self.tanque = tanque
+
+    def abastecer(self, litros):
+        self.tanque += litros

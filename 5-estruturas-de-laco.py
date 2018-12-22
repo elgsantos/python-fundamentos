@@ -1,3 +1,4 @@
+import time
 nomes = ['Joao', 'Eduardo', 'Alex', 'Julia']
 print(nomes[0:len(nomes)+1])
 
@@ -22,6 +23,7 @@ i=0
 while i < 10:
     print(i)
     i+=1
+    time.sleep(1)
 
 i=0
 while i < 10:

@@ -6,11 +6,15 @@ cabecalho = {'User-agent': 'Windows 20',
 
 meus_cookies = {'Ultima-visita': '10-10-2018'}
 
+dados = {'username': 'user',
+         'password': 'pass'}
+
 texto = None
 try:
     requisicao = requests.post('https://putsreq.com/7fmeywWOIvZIdiEqjhG1',
                                headers=cabecalho,
-                               cookies=meus_cookies)
+                               cookies=meus_cookies,
+                               data=dados)
     texto = requisicao.text
 except Exception as e:
     print('Erro na requisição', e)

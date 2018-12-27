@@ -1,6 +1,5 @@
 #Programa que retorna dados de cotação de moedas por uma api
 # api utilizada: https://docs.awesomeapi.com.br/api-de-moedas
-
 import requests
 import json
 import time

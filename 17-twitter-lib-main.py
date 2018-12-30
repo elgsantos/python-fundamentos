@@ -13,6 +13,23 @@ exec(open('twitter-auth.py').read())
 
 twitter = Twitter(consumer_key, secret_key, token_key, token_secret)
 
-for i in range(1,3):
-    query = input("Novo tweet: ")
-    twitter.tweet(query+' '+str(i))
+sair = False
+while not sair:
+    print('1 - Novo tweet')
+    print('2 - Pesquisar tweets')
+    op = input('Digite a opcao ou SAIR para fechar: ')
+    if op.lower() == 'sair':
+        sair = True
+    elif op == '1':
+        query = input("Novo tweet: ")
+        twitter.tweet(query)
+    elif op == '2':
+        query = input("Pesquisar: ")
+        pesquisa = twitter.search(query, 'pt')
+        print('____________________________________________')
+        for resultado in pesquisa:
+            print(resultado['user']['screen_name'])
+            print(resultado['text'])
+            print('____________________________________________')
+    else:
+        print('digite uma opção válida.')

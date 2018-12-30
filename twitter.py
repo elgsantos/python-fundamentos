@@ -20,3 +20,15 @@ class Twitter:
         decodificar = requisicao[1].decode()
         # transformar em dicionario
         objeto = json.loads(decodificar)
+        return objeto
+
+    def search(self, query, lang):
+        query_codificada = urllib.parse.quote(query, safe='')
+        requisicao = self.cliente.request(
+            'https://api.twitter.com/1.1/search/tweets.json?q=' + query_codificada + '&lang=' + lang)
+        # objeto veio em bytes, decodificar
+        decodificar = requisicao[1].decode()
+        # transformar em dicionario
+        objeto = json.loads(decodificar)
+        twittes = objeto['statuses']
+        return twittes

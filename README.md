@@ -1,4 +1,4 @@
-# fundamentos do Python
+# Fundamentos do Python
 códigos com os fundamentos do python
 
-para entender um por um é só seguir a ordem dos arquivos.
+Comece [aqui](https://github.com/elgsantos/python-fundamentos/blob/master/1-variaveis.py).
